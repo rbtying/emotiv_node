@@ -1,0 +1,8 @@
+time timestamp
+float32 headsetTime
+int32 lowerFaceAction
+int32 upperFaceAction
+float32 lowerFaceActionPower
+float32 upperFaceActionPower
+string lowerFaceActionName
+string upperFaceActionName
