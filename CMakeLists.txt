@@ -52,7 +52,7 @@ generate_messages(
 catkin_package(
    INCLUDE_DIRS include
 #  LIBRARIES emotiv_node
-   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+   CATKIN_DEPENDS message_runtime roscpp rospy std_msgs sensor_msgs
 #  DEPENDS system_lib
 )
 
@@ -87,8 +87,8 @@ FIND_LIBRARY(USB usb-1.0 "${CMAKE_CURRENT_SOURCE_DIR}/lib/")
 # add_executable(emotiv_node_node src/emotiv_node_node.cpp)
 
 add_library(JSON src/JSONValue.cpp src/JSON.cpp)
-add_executable(emotiv_node src/main.cpp src/Emotiv.cpp src/die.cpp src/request.cpp src/serv.cpp)
-target_link_libraries(emotiv_node ${BOOST_FS} ${BOOST_RE} ${BOOST_SER} ${BOOST_SYS} ${EDK} ${EDK_UTIL} ${HAL} ${USB} JSON)#) ${catkin_LIBRARIES})
+add_executable(emotiv_server src/main.cpp src/Emotiv.cpp src/die.cpp src/request.cpp src/serv.cpp)
+target_link_libraries(emotiv_server ${BOOST_FS} ${BOOST_RE} ${BOOST_SER} ${BOOST_SYS} ${EDK} ${EDK_UTIL} ${HAL} ${USB} JSON)#) ${catkin_LIBRARIES})
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_OLD_FLAGS}")
 
