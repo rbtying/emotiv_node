@@ -52,7 +52,7 @@ generate_messages(
 catkin_package(
    INCLUDE_DIRS include
 #  LIBRARIES emotiv_node
-   CATKIN_DEPENDS message_runtime roscpp rospy std_msgs sensor_msgs
+   CATKIN_DEPENDS message_runtime roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
