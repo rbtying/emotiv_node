@@ -1,0 +1,4 @@
+<launch>
+    <node name="emotiv_node" pkg="emotiv_node" type="emotiv_publisher.py">
+    </node>
+</launch>
